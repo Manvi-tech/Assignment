@@ -1,0 +1,165 @@
+
+// operators
+// variables
+// nesting
+// mixins
+// parameters
+
+$white-color: #e0e0e0;
+$grey-color: #9e9e9e;
+$light-color: #9e9e9e;
+$bg-color: #151518;
+$border-color: #686878;
+$username-color: #3497e5;
+
+@mixin text-prop($color, $font){
+    color: $color;
+    font-size: $font;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+@mixin flex-prop($align, $direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $align;
+}
+@mixin head-prop($border){
+    height: 9vh;
+    padding-top: 10px;
+    border-bottom:$border;
+}
+@mixin outline-btn($margin,$padding,$color){
+    &:hover{
+        color: #151518;
+    }
+    margin: $margin;
+    padding: $padding;
+    @include text-prop($color, 12px);
+    border-color: $light-color;
+}
+ 
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    color: $white-color;
+    background-color: $bg-color; 
+    display: flex;
+}
+
+#left{
+    width: 23vw;
+    height: 100vh;
+    border: 1px solid $border-color;
+
+    #left-head{
+        @include head-prop(none);
+        @include flex-prop(space-between,row);
+
+        .dropdown{
+            button{
+                background-color: transparent;
+                border: none;
+                @include text-prop($white-color, 14px); 
+            }
+        } 
+        .esc-btn{
+            button{
+                @include outline-btn(5px 10px, 3px, #ccc3c3);
+            } 
+        }
+           
+         
+    }
+
+    // search box
+    .input-box{
+        height: 5vh;
+        width: 19vw;
+        margin: 10px auto;
+        background-color: #9e9e9e;
+        @include flex-prop(flex-start,row);
+      
+        input{
+            background-color: transparent;
+            width: 88%;
+            margin:5px 1px;
+            border: none;
+            &::placeholder{
+               @include text-prop($white-color,13px);
+            }
+        }
+
+        .input-submit{
+            height: 73%;
+            width: 12%;
+            margin: 4px;
+            text-align: center;
+            background-color: black;
+            i{
+                color: $white-color;
+                font-size: 15px;
+            }
+        }
+    }
+
+    // user chat column
+    #users{
+        margin-top: 30px;
+        @include flex-prop(flex-start,column);
+        .user{
+            @include flex-prop(flex-start,row);
+            .user-img{
+                img{
+                    height: 35px;
+                    width: 35px;
+                    margin: 5px 7px;
+                    border-radius: 50%;
+                }
+            }
+            .user-info{
+                @include flex-prop(flex-start,column);
+                .user-name{
+                    text-transform: capitalize;
+                    @include text-prop($white-color,14px);
+                }
+                .msg{
+                    margin-top: -12px;
+                    @include text-prop($grey-color,13px);
+                }
+            }
+        }
+    }
+    
+}
+
+#right{
+    width: 77vw;
+    height: 100vh;
+
+    #right-head{
+        @include head-prop(1px solid $border-color);
+        @include flex-prop(space-between,row);
+        
+        #sign-up{
+           margin:5px 20px;
+           @include text-prop($white-color, 14px);
+        }
+
+        #room-buttons{
+            @include flex-prop(center,row);
+            margin-right: 20px;
+            button{
+                @include outline-btn(1px 10px 8px 10px,4px, #ccc3c3);
+            }
+            i{
+                color: $grey-color;
+                margin: 8px 10px;
+            }
+        }
+    }
+
+   
+}
