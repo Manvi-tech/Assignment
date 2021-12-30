@@ -9,15 +9,22 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-#left {
+body #left {
   width: 23vw;
   height: 100vh;
   border: 1px solid #686878;
 }
 
-#left #left-head {
+body #left #left-head {
   height: 9vh;
   padding-top: 10px;
   border-bottom: none;
@@ -33,7 +40,7 @@ body {
           justify-content: space-between;
 }
 
-#left #left-head .dropdown button {
+body #left #left-head .dropdown button {
   background-color: transparent;
   border: none;
   color: #e0e0e0;
@@ -42,7 +49,7 @@ body {
   font-family: sans-serif;
 }
 
-#left #left-head .esc-btn button {
+body #left #left-head .esc-btn button {
   margin: 5px 10px;
   padding: 3px;
   color: #ccc3c3;
@@ -52,11 +59,11 @@ body {
   border-color: #4d4d48;
 }
 
-#left #left-head .esc-btn button:hover {
+body #left #left-head .esc-btn button:hover {
   color: #151518;
 }
 
-#left .input-box {
+body #left .input-box {
   height: 5vh;
   width: 19vw;
   margin: 10px auto;
@@ -73,55 +80,55 @@ body {
           justify-content: flex-start;
 }
 
-#left .input-box input {
+body #left .input-box input {
   background-color: transparent;
   width: 88%;
   margin: 5px 1px;
   border: none;
 }
 
-#left .input-box input::-webkit-input-placeholder {
+body #left .input-box input::-webkit-input-placeholder {
   color: #e0e0e0;
   font-size: 13px;
   letter-spacing: 1px;
   font-family: sans-serif;
 }
 
-#left .input-box input:-ms-input-placeholder {
+body #left .input-box input:-ms-input-placeholder {
   color: #e0e0e0;
   font-size: 13px;
   letter-spacing: 1px;
   font-family: sans-serif;
 }
 
-#left .input-box input::-ms-input-placeholder {
+body #left .input-box input::-ms-input-placeholder {
   color: #e0e0e0;
   font-size: 13px;
   letter-spacing: 1px;
   font-family: sans-serif;
 }
 
-#left .input-box input::placeholder {
+body #left .input-box input::placeholder {
   color: #e0e0e0;
   font-size: 13px;
   letter-spacing: 1px;
   font-family: sans-serif;
 }
 
-#left .input-box .input-submit {
+body #left .input-box .input-submit {
   height: 73%;
   width: 12%;
   margin: 4px;
   background-color: black;
 }
 
-#left .input-box .input-submit i {
+body #left .input-box .input-submit i {
   font-size: 13px;
   -webkit-transform: translate(8px, -3px);
           transform: translate(8px, -3px);
 }
 
-#left #users {
+body #left #users {
   padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,7 +142,7 @@ body {
           justify-content: center;
 }
 
-#left #users .user {
+body #left #users .user {
   height: 62px;
   padding-top: 8px;
   display: -webkit-box;
@@ -151,14 +158,18 @@ body {
   border-top: 1px solid #4d4d48;
 }
 
-#left #users .user .user-img img {
+body #left #users .user:hover {
+  background-color: #4d4d48;
+}
+
+body #left #users .user .user-img img {
   height: 35px;
   width: 35px;
   margin: 5px 15px;
   border-radius: 50%;
 }
 
-#left #users .user .user-info {
+body #left #users .user .user-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,7 +182,7 @@ body {
           justify-content: center;
 }
 
-#left #users .user .user-info .user-name {
+body #left #users .user .user-info .user-name {
   text-transform: capitalize;
   color: #e0e0e0;
   font-size: 13px;
@@ -179,7 +190,7 @@ body {
   font-family: sans-serif;
 }
 
-#left #users .user .user-info .msg {
+body #left #users .user .user-info .msg {
   margin-top: -14px;
   color: #9e9e9e;
   font-size: 12px;
@@ -187,12 +198,12 @@ body {
   font-family: sans-serif;
 }
 
-#right {
+body #right {
   width: 77vw;
   height: 100vh;
 }
 
-#right #right-head {
+body #right #right-head {
   height: 9vh;
   padding-top: 10px;
   border-bottom: 1px solid #686878;
@@ -208,7 +219,7 @@ body {
           justify-content: space-between;
 }
 
-#right #right-head #sign-up {
+body #right #right-head #sign-up {
   margin: 5px 20px;
   color: #e0e0e0;
   font-size: 14px;
@@ -216,7 +227,7 @@ body {
   font-family: sans-serif;
 }
 
-#right #right-head #room-buttons {
+body #right #right-head #room-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,7 +241,7 @@ body {
   margin-right: 20px;
 }
 
-#right #right-head #room-buttons button {
+body #right #right-head #room-buttons button {
   margin: 1px 10px 8px 10px;
   padding: 4px;
   color: #ccc3c3;
@@ -240,16 +251,16 @@ body {
   border-color: #4d4d48;
 }
 
-#right #right-head #room-buttons button:hover {
+body #right #right-head #room-buttons button:hover {
   color: #151518;
 }
 
-#right #right-head #room-buttons i {
+body #right #right-head #room-buttons i {
   color: #9e9e9e;
   margin: 8px 10px;
 }
 
-#right .chatbot-container {
+body #right .chatbot-container {
   margin-top: 9px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,7 +274,7 @@ body {
           justify-content: flex-start;
 }
 
-#right .chatbot-container .chat-grp {
+body #right .chatbot-container .chat-msg {
   height: 55px;
   padding-top: 5px;
   display: -webkit-box;
@@ -278,14 +289,18 @@ body {
           justify-content: flex-start;
 }
 
-#right .chatbot-container .chat-grp .user-img img {
+body #right .chatbot-container .chat-msg:hover {
+  background-color: #4d4d48;
+}
+
+body #right .chatbot-container .chat-msg .user-img img {
   height: 35px;
   width: 35px;
   margin: 5px 15px;
   border-radius: 50%;
 }
 
-#right .chatbot-container .chat-grp .user-info {
+body #right .chatbot-container .chat-msg .user-info {
   margin-top: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -299,7 +314,7 @@ body {
           justify-content: center;
 }
 
-#right .chatbot-container .chat-grp .user-info .user-name {
+body #right .chatbot-container .chat-msg .user-info .user-name {
   text-transform: capitalize;
   color: #e0e0e0;
   font-size: 13px;
@@ -307,7 +322,7 @@ body {
   font-family: sans-serif;
 }
 
-#right .chatbot-container .chat-grp .user-info .msg {
+body #right .chatbot-container .chat-msg .user-info .msg {
   margin-top: -14px;
   line-height: 15px;
   color: #9e9e9e;
@@ -316,10 +331,82 @@ body {
   font-family: sans-serif;
 }
 
-#right .chatbot-container .chat-grp .user-info .msg .newuser {
+body #right .chatbot-container .chat-msg .user-info .msg .newuser {
   color: #3497e5;
   font-size: 12px;
   letter-spacing: 1px;
   font-family: sans-serif;
+}
+
+body #right .chatbot-container .new-msg {
+  border-top: 1px solid maroon;
+  margin-bottom: -20px;
+}
+
+body #right .chatbot-container .new-msg span {
+  display: inline-block;
+  border: 1px solid maroon;
+  -webkit-transform: translate(800%, -70%);
+          transform: translate(800%, -70%);
+  z-index: 2;
+  padding: 1px 0px;
+  background-color: #151518;
+}
+
+body #right .chatbot-container .type-msg {
+  width: 90%;
+  margin: 10px auto;
+  padding: 3px 6px;
+  border: 1px solid #4d4d48;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #right .chatbot-container .type-msg input {
+  background-color: transparent;
+  width: 80%;
+  margin: 5px 1px;
+  border: none;
+}
+
+body #right .chatbot-container .type-msg input::-webkit-input-placeholder {
+  color: #9e9e9e;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+}
+
+body #right .chatbot-container .type-msg input:-ms-input-placeholder {
+  color: #9e9e9e;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+}
+
+body #right .chatbot-container .type-msg input::-ms-input-placeholder {
+  color: #9e9e9e;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+}
+
+body #right .chatbot-container .type-msg input::placeholder {
+  color: #9e9e9e;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+}
+
+body #right .chatbot-container .type-msg .icons i {
+  color: #4d4d48;
+  margin-right: 5px;
 }
 /*# sourceMappingURL=chat-screen.css.map */

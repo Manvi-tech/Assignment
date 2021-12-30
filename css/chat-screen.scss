@@ -44,6 +44,11 @@ $username-color: #3497e5;
     margin: 5px 15px;
     border-radius: 50%;
 }
+@mixin hover-prop{
+    &:hover{
+        background-color: $light-color;
+    }
+}
  
 *{
     margin: 0%;
@@ -53,149 +58,189 @@ $username-color: #3497e5;
 body{
     color: $white-color;
     background-color: $bg-color; 
-    display: flex;
-}
+    @include flex-prop(flex-start,row);
 
-#left{
-    width: 23vw;
-    height: 100vh;
-    border: 1px solid $border-color;
+    // left section of chat screen
+    #left{
+        width: 23vw;
+        height: 100vh;
+        border: 1px solid $border-color;
 
-    #left-head{
-        @include head-prop(none);
-        @include flex-prop(space-between,row);
+        #left-head{
+            @include head-prop(none);
+            @include flex-prop(space-between,row);
 
-        .dropdown{
-            button{
-                background-color: transparent;
-                border: none;
-                @include text-prop($white-color, 14px); 
-            }
-        } 
-        .esc-btn{
-            button{
-                @include outline-btn(5px 10px, 3px, #ccc3c3);
+            .dropdown{
+                button{
+                    background-color: transparent;
+                    border: none;
+                    @include text-prop($white-color, 14px); 
+                }
             } 
-        }
-           
-         
-    }
-
-    // search box
-    .input-box{
-        height: 5vh;
-        width: 19vw;
-        margin: 10px auto;
-        background-color: $light-color;
-        @include flex-prop(flex-start,row);
-      
-        input{
-            background-color: transparent;
-            width: 88%;
-            margin:5px 1px;
-            border: none;
-            &::placeholder{
-               @include text-prop($white-color,13px);
+            .esc-btn{
+                button{
+                    @include outline-btn(5px 10px, 3px, #ccc3c3);
+                } 
             }
-        }
-
-        .input-submit{
-            height: 73%;
-            width: 12%;
-            margin: 4px;
-            background-color: black;
-            i{
-                font-size: 13px;
-                transform: translate(8px,-3px);
-            }
-        }
-    }
-
-    // user chat column
-    #users{
-        padding-top: 20px;
-        @include flex-prop(center,column);
-        .user{
-            height: 62px;
-            padding-top: 8px;
-            @include flex-prop(flex-start,row);
-            border-top: 1px solid $light-color;
-            .user-img{
-                img{
-                   @include img-prop;
-                }
-            }
-            .user-info{
-                @include flex-prop(center,column);
-                .user-name{
-                    text-transform: capitalize;
-                    @include text-prop($white-color,13px);
-                }
-                .msg{
-                    margin-top: -14px;
-                    @include text-prop($grey-color,12px);
-                }
-            }
-        }
-    }
-    
-}
-
-#right{
-    width: 77vw;
-    height: 100vh;
-
-    #right-head{
-        @include head-prop(1px solid $border-color);
-        @include flex-prop(space-between,row);
-        
-        #sign-up{
-           margin:5px 20px;
-           @include text-prop($white-color, 14px);
-        }
-
-        #room-buttons{
-            @include flex-prop(center,row);
-            margin-right: 20px;
-            button{
-                @include outline-btn(1px 10px 8px 10px,4px, #ccc3c3);
-            }
-            i{
-                color: $grey-color;
-                margin: 8px 10px;
-            }
-        }
-    }
-
-    .chatbot-container{
-        margin-top: 9px;
-        @include flex-prop(flex-start,column);
-        .chat-grp{
-            height: 55px;
-            padding-top: 5px;
-            @include flex-prop(flex-start,row);
             
-            .user-img img{
-                @include img-prop;
-            }
-            .user-info{
-                margin-top: 5px;
-                @include flex-prop(center,column);
-                .user-name{
-                    text-transform: capitalize;
-                    @include text-prop($white-color,13px);
+            
+        }
+
+        // search box
+        .input-box{
+            height: 5vh;
+            width: 19vw;
+            margin: 10px auto;
+            background-color: $light-color;
+            @include flex-prop(flex-start,row);
+        
+            input{
+                background-color: transparent;
+                width: 88%;
+                margin:5px 1px;
+                border: none;
+                &::placeholder{
+                  @include text-prop($white-color,13px);
                 }
-                .msg{
-                    margin-top: -14px;
-                    line-height: 15px;
-                    @include text-prop($grey-color,12px);
-                    .newuser{
-                        @include text-prop($username-color,12px);
+            }
+
+            .input-submit{
+                height: 73%;
+                width: 12%;
+                margin: 4px;
+                background-color: black;
+                i{
+                    font-size: 13px;
+                    transform: translate(8px,-3px);
+                }
+            }
+        }
+
+        // user chat column
+        #users{
+            padding-top: 20px;
+            @include flex-prop(center,column);
+            .user{
+                height: 62px;
+                padding-top: 8px;
+                @include flex-prop(flex-start,row);
+                @include hover-prop;
+                border-top: 1px solid $light-color;
+                .user-img{
+                    img{
+                    @include img-prop;
+                    }
+                }
+                .user-info{
+                    @include flex-prop(center,column);
+                    .user-name{
+                        text-transform: capitalize;
+                        @include text-prop($white-color,13px);
+                    }
+                    .msg{
+                        margin-top: -14px;
+                        @include text-prop($grey-color,12px);
                     }
                 }
             }
         }
+        
     }
 
-   
+    // right section of chat screen
+    #right{
+        width: 77vw;
+        height: 100vh;
+
+        #right-head{
+            @include head-prop(1px solid $border-color);
+            @include flex-prop(space-between,row);
+            
+            #sign-up{
+            margin:5px 20px;
+            @include text-prop($white-color, 14px);
+            }
+
+            #room-buttons{
+                @include flex-prop(center,row);
+                margin-right: 20px;
+                button{
+                    @include outline-btn(1px 10px 8px 10px,4px, #ccc3c3);
+                }
+                i{
+                    color: $grey-color;
+                    margin: 8px 10px;
+                }
+            }
+        }
+
+        // chat bot container
+        .chatbot-container{
+            margin-top: 9px;
+            @include flex-prop(flex-start,column);
+
+            .chat-msg{
+                height: 55px;
+                padding-top: 5px;
+                @include flex-prop(flex-start,row);
+                @include hover-prop;
+                .user-img img{
+                    @include img-prop;
+                }
+                .user-info{
+                    margin-top: 5px;
+                    @include flex-prop(center,column);
+                    .user-name{
+                        text-transform: capitalize;
+                        @include text-prop($white-color,13px);
+                    }
+                    .msg{
+                        margin-top: -14px;
+                        line-height: 15px;
+                        @include text-prop($grey-color,12px);
+                        .newuser{
+                            @include text-prop($username-color,12px);
+                        }
+                    }
+                }
+            }
+
+            .new-msg{
+                border-top: 1px solid maroon;
+                span{
+                    display: inline-block;
+                    border: 1px solid maroon;
+                    transform: translate(800%, -70%);
+                    z-index: 2;
+                    padding: 1px 0px;
+                    background-color: $bg-color;
+                }
+                margin-bottom: -20px;
+            }
+
+            .type-msg{
+                width: 90%;
+                margin: 10px auto;
+                padding: 3px 6px;
+                border: 1px solid $light-color;
+                @include flex-prop(flex-start,row);
+                input{
+                    background-color: transparent;
+                    width: 80%;
+                    margin:5px 1px;
+                    border: none;
+                    &::placeholder{
+                      @include text-prop($grey-color,13px);
+                    }
+                }
+                .icons i{
+                    color: $light-color;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+    
+    }
+
 }
