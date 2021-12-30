@@ -163,9 +163,9 @@ body #left #users .user:hover {
 }
 
 body #left #users .user .user-img img {
-  height: 35px;
-  width: 35px;
-  margin: 5px 15px;
+  height: 30px;
+  width: 30px;
+  margin: 5px 10px;
   border-radius: 50%;
 }
 
@@ -253,6 +253,17 @@ body #right #right-head #room-buttons button {
 
 body #right #right-head #room-buttons button:hover {
   color: #151518;
+}
+
+body #right #right-head #room-buttons .grp-users {
+  margin: 0px 10px;
+}
+
+body #right #right-head #room-buttons .grp-users img {
+  height: 25px;
+  width: 25px;
+  margin: 5px -7px;
+  border-radius: 50%;
 }
 
 body #right #right-head #room-buttons i {

@@ -38,10 +38,10 @@ $username-color: #3497e5;
     @include text-prop($color, 12px);
     border-color: $light-color;
 }
-@mixin img-prop{
-    height: 35px;
-    width: 35px;
-    margin: 5px 15px;
+@mixin img-prop($height,$width,$margin){
+    height: $height;
+    width: $width;
+    margin: $margin;
     border-radius: 50%;
 }
 @mixin hover-prop{
@@ -128,7 +128,7 @@ body{
                 border-top: 1px solid $light-color;
                 .user-img{
                     img{
-                    @include img-prop;
+                       @include img-prop(30px,30px,5px 10px);
                     }
                 }
                 .user-info{
@@ -167,6 +167,12 @@ body{
                 button{
                     @include outline-btn(1px 10px 8px 10px,4px, #ccc3c3);
                 }
+                .grp-users{
+                    margin: 0px 10px;
+                    img{
+                        @include img-prop(25px,25px ,5px -7px);
+                    }
+                }
                 i{
                     color: $grey-color;
                     margin: 8px 10px;
@@ -185,7 +191,7 @@ body{
                 @include flex-prop(flex-start,row);
                 @include hover-prop;
                 .user-img img{
-                    @include img-prop;
+                    @include img-prop(35px, 35px,5px 15px);
                 }
                 .user-info{
                     margin-top: 5px;
