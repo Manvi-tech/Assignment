@@ -288,6 +288,7 @@ body #right .chatbot-container {
 body #right .chatbot-container .chat-msg {
   height: 55px;
   padding-top: 5px;
+  padding-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,8 +361,12 @@ body #right .chatbot-container .new-msg span {
   -webkit-transform: translate(800%, -70%);
           transform: translate(800%, -70%);
   z-index: 2;
-  padding: 1px 0px;
+  padding: 1px 10px;
   background-color: #151518;
+  color: #e0e0e0;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-family: sans-serif;
 }
 
 body #right .chatbot-container .type-msg {

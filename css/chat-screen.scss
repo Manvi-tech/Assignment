@@ -188,6 +188,7 @@ body{
             .chat-msg{
                 height: 55px;
                 padding-top: 5px;
+                padding-right: 10px;
                 @include flex-prop(flex-start,row);
                 @include hover-prop;
                 .user-img img{
@@ -218,8 +219,9 @@ body{
                     border: 1px solid maroon;
                     transform: translate(800%, -70%);
                     z-index: 2;
-                    padding: 1px 0px;
+                    padding: 1px 10px;
                     background-color: $bg-color;
+                    @include text-prop($white-color,11px);
                 }
                 margin-bottom: -20px;
             }
