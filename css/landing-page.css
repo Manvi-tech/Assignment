@@ -2,4 +2,107 @@
   margin: 0%;
   padding: 0%;
 }
+
+body header {
+  background-image: url("../images/bg3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 82vh;
+  width: 100vw;
+}
+
+body header nav a.navbar-brand {
+  margin-left: 60px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+body header nav .navbar-nav {
+  margin: 5px auto;
+}
+
+body header nav .navbar-nav a {
+  font-size: 17px !important;
+  color: black;
+  margin-right: 15px;
+}
+
+body .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .popular-deals h2 {
+  font-family: 'Lobster', cursive;
+  letter-spacing: 0.1px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+body .popular-deals h2 span {
+  color: grey;
+}
+
+body .popular-deals .deal-details {
+  width: 85%;
+  margin: 25px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .popular-deals .deal-details div {
+  width: 20%;
+  height: 400px;
+  text-align: center;
+}
+
+body .popular-deals .deal-details div .img-box {
+  height: 300px;
+  width: 85%;
+  margin: 0px auto;
+}
+
+body .popular-deals .deal-details div .img-box img {
+  max-height: 300px;
+  max-width: 100%;
+}
+
+body .popular-deals .deal-details div .deal-info {
+  height: 80px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .popular-deals .deal-details div .deal-info .cloth-title {
+  font-family: sans-serif;
+  color: 14px;
+  font-size: darkgrey;
+  font-weight: 600;
+}
 /*# sourceMappingURL=landing-page.css.map */

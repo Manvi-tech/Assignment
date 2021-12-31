@@ -3,3 +3,92 @@
     margin: 0%;
     padding: 0%;
 }
+
+@mixin text-prop($size,$color){
+    font-family: sans-serif;
+    color: $color;
+    font-size: $size;
+}
+
+@mixin flex-prop($align,$direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $align;
+}
+
+@mixin dimension($height, $width){
+    height: $height;
+    width: $width;
+} 
+
+body{
+   header{
+        background-image: url('../images/bg3.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 82vh;
+        width: 100vw;
+        nav{
+            a.navbar-brand{
+                margin-left: 60px;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+            .navbar-nav{
+                margin: 5px auto;
+                a{
+                   font-size: 17px !important;
+                   color: black;
+                   margin-right: 15px;
+                }
+            }
+        }
+    }
+
+    // clothes types
+    .img-container{
+        @include flex-prop(flex-start,column);
+        
+    }
+
+    // popular deals section
+    .popular-deals{
+        h2{
+            font-family: 'Lobster', cursive;
+            letter-spacing: 0.1px;
+            font-family: 'Open Sans Condensed', sans-serif;
+            text-transform:uppercase;
+            margin-top: 25px;
+            span{
+                color: grey;
+            }
+        }
+        .deal-details{
+            width: 85%;
+            margin: 25px auto; 
+            @include flex-prop(center,row);
+            div{
+                width: 20%;
+                height: 400px;
+                // border: 1px solid black;
+                text-align: center;
+                .img-box{
+                    @include dimension(300px,85%);
+                    margin: 0px auto;
+                    img{
+                        max-height: 300px;
+                        max-width: 100%;
+                    }
+                }
+                .deal-info{
+                    @include dimension(80px,100%);
+                    @include flex-prop(flex-start,column);
+                    .cloth-title{
+                        @include text-prop(darkgrey,14px);
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
