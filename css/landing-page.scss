@@ -90,5 +90,108 @@ body{
                 }
             }
         }
+
+        .more-deals{
+            width: 75%;
+            margin: auto;
+            @include flex-prop(center,row);
+            div{
+                width: 30%;
+                height: 200px;
+                margin:10px 5px;
+                text-align: center;
+                @include flex-prop(flex-start,column);
+                img{
+                    max-height: 170px;
+                    width: 100%;
+                    opacity: 0.9;
+                    margin-bottom: 10px;
+                }
+
+                .category{
+                   @include text-prop(lightgrey,15px);
+                }
+                .info{
+                   @include text-prop(darkgrey,13px);
+                }
+                .btn{
+                    border: 1px solid lightseagreen;
+                    padding: 2px;
+                    width:fit-content;
+                    margin: 10px auto;
+                    padding: 4px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .payment{
+            @include flex-prop(center,row);
+            @include dimension(450px,70%);
+            margin: 0px auto;
+            font-family: 'Lobster', cursive;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
+            div img{
+                @include dimension(250px,300px);
+                margin-top: 100px;
+                margin-right: 7px;
+                
+            }
+        }
+    }
+
+    footer{
+        .mail-box{
+            @include dimension(75vh,100vw);
+            background-image: url('../images/bg2.jpg');
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center;
+            opacity: 0.9;
+            color: white;
+            @include flex-prop(flex-start,column);
+            text-align: center;
+            padding-top: 65px;
+
+            h4,h5{
+                margin: 5px 0px;
+            }
+            div{
+                margin: 10px 0px;
+                input{
+                    background-color: transparent;
+                    border: 1px solid lightblue;
+                    padding:3px 4px; 
+                    width: 270px;
+                }
+                button{
+                    background-color: aquamarine;
+                    @include text-prop(17px,black);
+                    width: 60px;
+                    padding: 3px 4px;
+                    border: none;
+                }
+            }
+        }
+
+        .contact{
+           background-color: #7a746b;
+           @include dimension(50vh,100vw);
+           text-align: center;
+           @include flex-prop(center,column);
+           color: white;
+
+           .icons{
+                margin: 40px 0 10px 0;
+                i{
+                    margin:5px;
+                }
+
+           }
+           h5{
+               margin-top: 35px;
+           }
+        }
     }
 }

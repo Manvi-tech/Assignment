@@ -105,4 +105,170 @@ body .popular-deals .deal-details div .deal-info .cloth-title {
   font-size: darkgrey;
   font-weight: 600;
 }
+
+body .popular-deals .more-deals {
+  width: 75%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .popular-deals .more-deals div {
+  width: 30%;
+  height: 200px;
+  margin: 10px 5px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .popular-deals .more-deals div img {
+  max-height: 170px;
+  width: 100%;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+body .popular-deals .more-deals div .category {
+  font-family: sans-serif;
+  color: 15px;
+  font-size: lightgrey;
+}
+
+body .popular-deals .more-deals div .info {
+  font-family: sans-serif;
+  color: 13px;
+  font-size: darkgrey;
+}
+
+body .popular-deals .more-deals div .btn {
+  border: 1px solid lightseagreen;
+  padding: 2px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+  padding: 4px;
+  font-size: 14px;
+}
+
+body .popular-deals .payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 450px;
+  width: 70%;
+  margin: 0px auto;
+  font-family: 'Lobster', cursive;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body .popular-deals .payment div img {
+  height: 250px;
+  width: 300px;
+  margin-top: 100px;
+  margin-right: 7px;
+}
+
+body footer .mail-box {
+  height: 75vh;
+  width: 100vw;
+  background-image: url("../images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+  padding-top: 65px;
+}
+
+body footer .mail-box h4, body footer .mail-box h5 {
+  margin: 5px 0px;
+}
+
+body footer .mail-box div {
+  margin: 10px 0px;
+}
+
+body footer .mail-box div input {
+  background-color: transparent;
+  border: 1px solid lightblue;
+  padding: 3px 4px;
+  width: 270px;
+}
+
+body footer .mail-box div button {
+  background-color: aquamarine;
+  font-family: sans-serif;
+  color: black;
+  font-size: 17px;
+  width: 60px;
+  padding: 3px 4px;
+  border: none;
+}
+
+body footer .contact {
+  background-color: #7a746b;
+  height: 50vh;
+  width: 100vw;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+body footer .contact .icons {
+  margin: 40px 0 10px 0;
+}
+
+body footer .contact .icons i {
+  margin: 5px;
+}
+
+body footer .contact h5 {
+  margin-top: 35px;
+}
 /*# sourceMappingURL=landing-page.css.map */
