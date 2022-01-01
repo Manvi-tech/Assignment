@@ -40,6 +40,51 @@ body .img-container {
           justify-content: flex-start;
 }
 
+body .img-container .first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .img-container .first img {
+  height: 250px;
+  width: 25vw;
+}
+
+body .img-container .first .clearance {
+  border: 1px solid black;
+}
+
+body .img-container .clothes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .img-container .clothes img {
+  height: 400px;
+  width: 45vw;
+}
+
+body .img-container .clothes .summer-stock {
+  height: 400px;
+  width: 55vw;
+}
+
 body .popular-deals h2 {
   font-family: 'Lobster', cursive;
   letter-spacing: 0.1px;
@@ -270,5 +315,9 @@ body footer .contact .icons i {
 
 body footer .contact h5 {
   margin-top: 35px;
+}
+
+body footer .contact h5 span {
+  color: #cac8c8;
 }
 /*# sourceMappingURL=landing-page.css.map */

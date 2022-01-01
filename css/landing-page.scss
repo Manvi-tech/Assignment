@@ -48,6 +48,25 @@ body{
     // clothes types
     .img-container{
         @include flex-prop(flex-start,column);
+        .first{
+            @include flex-prop(flex-start,row);
+            img{
+                @include dimension(250px,25vw);
+            }
+            .clearance{
+                border:1px solid black;
+            }
+        }
+        .clothes{
+            @include flex-prop(flex-start,row);
+            img{
+                @include dimension(400px,45vw);
+            }
+            .summer-stock{
+                @include dimension(400px,55vw);
+            }
+           
+        }
         
     }
 
@@ -191,6 +210,9 @@ body{
            }
            h5{
                margin-top: 35px;
+               span{
+                   color: #cac8c8;
+               }
            }
         }
     }
